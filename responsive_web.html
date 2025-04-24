@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        /* Reset basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation bar with Flexbox */
+        .navbar {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        .navbar ul li {
+            margin: 0;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            background-color: #fff;
+            padding: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Main Content using CSS Grid */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .content .box {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content .box h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .content .box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Media Queries */
+        /* Mobile First - For screens smaller than 600px */
+        @media (max-width: 600px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                grid-template-columns: 1fr; 
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Tablet - Between 601px and 1024px */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .content {
+                grid-template-columns: 1fr 1fr; /* Two columns */
+                gap: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Desktop - Larger than 1025px */
+        @media (min-width: 1025px) {
+            .content {
+                grid-template-columns: 1fr 1fr 1fr; /* to create 3 columns */
+                gap: 2rem;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Welcome to Our Responsive Website</h1>
+        <p>Your one-stop destination for quality web services</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="content">
+        <section class="box">
+            <h2>About Us</h2>
+            <p>We are a team of experienced web designers and developers who create responsive websites that look great on all devices.</p>
+        </section>
+
+        <section class="box">
+            <h2>Our Services</h2>
+            <p>We specialize in web development, search engine optimization, and digital marketing. Let us help you grow your business online.</p>
+        </section>
+
+        <section class="box">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to learn more about our services or to discuss your project needs. We are here to help!</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Outring Company. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
